@@ -1,0 +1,463 @@
+/*Style sheet for Travel Experts Website*/
+/*Last edited on 26 June 2021*/
+/*re-usable styles*/
+
+
+/*Author: Daogeng Jiang*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+
+/*set background image and have size stretch to the window*/
+/*Author:Daogeng Jiang*/
+
+body {
+	background-image: url("media/cloudbg.jpg");
+	background-size: cover;
+}
+
+
+/*style of text on pages*/
+/*Author:Daogeng Jiang*/
+
+.traveltext {
+	font-size: 70pt;
+	font-family: 'Spartan';
+	background-color: #020842;
+	text-align: center;
+	color: white;
+}
+
+
+/*Header image styles*/
+/*Author:Daogeng Jiang*/
+
+.headerimg {
+	height: 200px;
+	width: 240px;
+}
+
+
+/* top navigation bar styles */
+/*Author: Sai Shalini Karaikatte Venugopal*/
+
+.topnav {
+	width: 100%;
+	overflow: auto;
+	background-color: #020842;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	margin-right: 25px;
+	margin-left: 95px;
+	padding-left: 5px;
+	padding-left: 55px;
+}
+
+.topnav a:hover {
+	color: orange
+}
+
+.topnav a.active {
+	background-color: #020d78;
+}
+
+.detailed {
+	background-color: #020842;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: auto;
+	display: block;
+	cursor: pointer;
+}
+
+
+/*carousel-content styles*/
+/*Author: Sai Shalini Karaikatte Venugopal*/
+
+.carousel-content {
+	position: absolute;
+	bottom: 10%;
+	left: 5%;
+	z-index: 20;
+	color: darkblue;
+	background-color: #d3e1e8;
+	opacity: 0.7;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+
+/*Form Styles*/
+/*Form input styles*/
+/*Author: Sai Shalini Karaikatte Venugopal*/
+
+.frmc {
+	width: 60%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	heigh: 30px;
+	background-color: lightblue;
+	color: darkblue;
+	outline-offset: 0;
+}
+
+
+/*align input and label fields in register page*/
+/*Author: Daogeng Jiang*/
+
+.labelaligned {
+	width: 120px;
+	display: inline-block;
+	text-align: right;
+}
+
+
+/*Stacking the tips according to the input position*/
+/*Author: Sai Shalini Karaikatte Venugopal*/
+
+.tips {
+	position: relative;
+	bottom: 50px;
+	left: 500px;
+	background-color: lightgreen;
+	text-align: center;
+	color: black;
+	height: 35px;
+	width: 200px;
+	display: none;
+}
+
+
+/*Error display styles*/
+/*Author: Sai Shalini Karaikatte Venugopal*/
+
+.error {
+	position: relative;
+	top: 0px;
+	left: 60px;
+	text-align: center;
+	height: 35px;
+	width: 500px;
+	display: none;
+}
+
+
+/*Form Submit and Reset button styles*/
+/*Author: Sai Shalini Karaikatte Venugopal*/
+
+input[type=submit] {
+	background-color: #020842;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin-left: 110px;
+	cursor: pointer;
+}
+
+input[type=reset] {
+	background-color: #020842;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+
+/*display input and text fields in an organized table structure*/
+/*Author: Daogeng Jiang*/
+
+form {
+	display: table;
+}
+
+p {
+	display: table-row;
+}
+
+label {
+	display: table-cell;
+}
+
+input {
+	display: table-cell;
+}
+
+
+/*Set vacation packages styles*/
+/*	set each package showing fields
+Author: jiang Hou
+*/
+
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+
+/*set the shadow effect of the 10 little containers
+Author: jiang Hou
+*/
+
+.box-container .box {
+	flex: 1 1 30rem;
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+
+/*set the images display of each container
+Author: jiang Hou
+
+*/
+
+.box-container .box img {
+	height: 25rem;
+	width: 100%;
+	object-fit: cover;
+}
+
+
+/*set the content padding,move it far from image
+Author: jiang Hou
+*/
+
+.box-container .box .content {
+	padding: 2rem;
+}
+
+
+/*set each city(h3) font size and color
+Author: jiang Hou
+*/
+
+.box-container .box .content h3 {
+	font-size: 2rem;
+	color: #333;
+}
+
+/*set the content p fields
+Author: jiang Hou
+*/
+
+.box-container .box .content p {
+	font-size: 1.7rem;
+	color: #666;
+	padding: 1rem 0;
+}
+
+
+/*set the discount price fields
+Author: jiang Hou
+*/
+
+.box-container .box .content .price {
+	font-size: 2rem;
+	color: #333;
+	padding-top: 1rem;
+}
+
+
+/*set the base price fields
+Author: jiang Hou
+*/
+
+.packages .box-container .box .content .price span {
+	color: #666;
+	font-size: 2rem;
+	text-decoration: line-through;
+}
+
+
+/*set each package fields
+Author: jiang Hou
+*/
+
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+
+
+/*set the content fields in box
+Author: jiang Hou
+*/
+
+.box-container .box {
+	flex: 1 1 30rem;
+	border-radius: .5rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+
+/*
+set the p tag font size, color and padding
+Author: jiang Hou
+ */
+
+.box-container .box p {
+	font-size: 1.5rem;
+	color: #666;
+	padding: 1rem 0;
+}
+
+
+/*
+set the box hover effect
+Author: jiang Hou
+ */
+
+.box-container .box:hover {
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+}
+
+
+/*set the book button fields
+Author: jiang Hou
+*/
+
+.btn {
+	display: inline-block;
+	margin-top: 2rem;
+	background: var(--orange);
+	color: #fff;
+	padding: .8rem 3rem;
+	border: .2.5rem solid var(--orange);
+	cursor: pointer;
+	font-size: 1.7rem;
+}
+
+
+/*set book button hover effect
+Author: jiang Hou
+*/
+
+.btn:hover {
+	background: rgba(255, 165, 0, .2);
+	color: var(--orange);
+}
+
+
+/*set book button display fields
+Author: jiang Hou
+*/
+
+.btn {
+	display: block;
+	width: 100%;
+}
+
+
+/*set the brand-container logo align
+Author: jiang Hou
+*/
+
+.brand-container {
+	text-align: center;
+}
+
+
+/*Set footer styles*/
+
+
+/* set the foot background color
+*/
+
+.footer {
+	background: #020842;
+}
+
+
+/*set the footer elements list fields
+Author: jiang Hou
+*/
+
+.footer .box-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+
+
+/*set each box's padding
+Author: jiang Hou
+*/
+
+.footer .box-container .box {
+	padding: 1rem 0;
+	flex: 1 1 25rem;
+}
+
+
+/*set h3's font size/color and padding
+Author: jiang Hou
+*/
+
+.footer .box-container .box h3 {
+	font-size: 2.5rem;
+	padding: .7rem 0;
+	color: #fff;
+}
+
+
+/*set p tag fields
+Author: jiang Hou
+*/
+
+.footer .box-container .box p {
+	font-size: 1.5rem;
+	padding: .7rem 0;
+	color: #eee;
+}
+
+
+/*
+set the every link's fields
+Author: jiang Hou
+*/
+
+.footer .box-container .box a {
+	display: block;
+	font-size: 1.5rem;
+	padding: .7rem 0;
+	color: #eee;
+}
+
+
+/*set the link hover effect fields
+Author: jiang Hou*/
+
+.footer .box-container .box a:hover {
+	color: orange;
+	text-decoration: underline;
+}
+
+
+/*set the copyright fields and align
+Author: jiang Hou
+*/
+
+.footer .box3 {
+	text-align: center;
+	padding: 2rem 1rem;
+	margin-top: 1rem;
+	font-size: 2rem;
+	font-weight: normal;
+	color: #fff;
+	border-top: .1rem solid rgba(255, 255, 255, .2);
+	float: bottom;
+}

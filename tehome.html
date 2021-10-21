@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--Code to create home page for Travel Agents website-->
+<!--Last Edited on 26 June 2021-->
+
+<!--Adding Navbar,linking stylesheets and adding bootstrap>
+<!--Author: Sai Shalini Karaikatte Venugopal-->
+<html>
+	<head>
+		<!--Adding default stylesheet-->
+		<link rel="stylesheet" type="text/css" href="default.css"></link>
+		<!--Adding customized styles-->
+		<link rel="icon" href="media/favicon.ico" type="image/x-icon"></link>		
+		<link rel="stylesheet" type="text/css" href="prstyles.css"></link>
+		<!--Adding bootstrap elements-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+		<title>Welcome Page</title>
+    
+	</head>
+				
+	<body>
+		<!--Header section with logo and Heading-->
+	<header>
+			<img class="headerimg" align="left" src="media/TravelLogo.ico">
+			<h1 class="traveltext">Welcome to Travel Experts</h1>
+		<!--Adding Navigation bar which redirects to other pages of the website-->
+		<div class="topnav">
+			<a class="active" href="tehome"><i class="fa fa-fw fa-home"></i> Home</a> 
+			<a href="teproduct.html"><i class="fa fa-peace"></i> Products</a>
+			<a href="tevacation"><i class="fab fa-telegram-plane"></i> Vacation Packages</a> 
+			<a href="tecontact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+			<a href="teregister"><i class="fas fa-sign-in-alt"></i></i> Register</a>
+			
+		</div>
+	</header>
+		
+	<!--Adding container for Image carousel to display images in a slide show-->
+	<!--Author: Sai Shalini Karaikatte Venugopal-->
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="media/travel1.jpg" alt="Jet Set" style="width:100%;height:600px">
+					<div class="carousel-content"><p><h1>Jetset with us!</h1><h2>Let us show you the World in style.
+					Contact one of our expert travel agents Today!</h2></p></div>
+				</div>					
+
+				<div class="item">
+					<img src="media/travel2.jpg" alt="Nature trails" style="width:100%;height:600px">
+					<div class="carousel-content"><p><h1>Be one with nature!</h1><h2>Take our customized tours to the
+                    least explored nature trails!</h2></p></div>
+				</div>
+    
+				<div class="item">
+					<img src="media/travel3.jpg" alt="Italy" style="width:100%;height:600px">
+					<div class="carousel-content"><p><h1>Salve Italy!</h1><h2>Witness the marvel of the Sistene chapel, Take a Gondola ride in Venice,
+					Take a stroll in Florence, Enjoy the beauty of Lake Como!</h2></p></div>
+				</div>
+	  
+				<div class="item">
+					<img src="media/travel4.jpg" alt="Maldives" style="width:100%;height:600px">
+					<div class="carousel-content"><p><h1>Snorkel in Maldives!</h1><h2>Schecule a snorkel trip to Maldives! Call our agentsToday for a
+                    complimentry Sea Plane ride.</h2></p></div>
+				</div>
+				
+				<div class="item">
+					<img src="media/travel5.jpg" alt="Koh Samui" style="width:100%;height:600px">
+					<div class="carousel-content"><p><h1>Thai Experience</h1><h2>Enjoy the sunset in Koh Samui or stroll through the 
+					busy streets of Bangkok. Take a look at our exclusive vacation packages.</h2></p></div>
+				</div>
+				
+				<div class="item">
+					<img src="media/travel6.jpg" alt="Kerala" style="width:100%;height:600px">
+					<div class="carousel-content"><p><h1>Serene Kerala</h1><h2>Take a houseboat ride in the beautiful
+                     back waters of Kerala</h2></p></div>
+				</div>
+			</div>
+	
+
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+<!--Adding travel company footer and copyright information-->
+<!--Author: Jiang Hou-->
+		<div class="footer">
+			<div class="box-container">
+
+				<div class="box">
+					<h3>Company</h3>
+					<a href="#">About</a>
+					<a href="#">Partnership</a>
+					<a href="#">Investor Relations</a>
+					<a href="#">Advertising</a>
+				</div>
+				
+				<div class="box">
+					<h3>Branch locations</h3>
+					<a href="#">Canada</a>
+					<a href="#">USA</a>
+					<a href="#">Japan</a>
+					<a href="#">Germany</a>
+				</div>
+				
+				<div class="box">
+					<h3>Quick links</h3>
+					<a href="tehome">home</a>
+					<a href="tevacation">vacation package</a>
+					<a href="teproduct">product</a>
+					<a href="tecontact">contact us</a>
+					<a href="teregister">register</a>
+				</div>
+				
+				<div class="box">
+					<h3>Follow us</h3>
+					<a href="#">facebook</a>
+					<a href="#">instagram</a>
+					<a href="#">twitter</a>
+					<a href="#">linkedin</a>
+				</div>
+
+			</div>
+
+           <div class="box3">
+           <h4 ><span> Travel Experts Copyright &copy; 2021</span> | All rights reserved </h4>
+          </div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--Code to register new customer-->
+<!--Last Edited on 26 June 2021-->
+<!--Author: Sai Shalini Karaikatte Venugopal-->
+<html>
+   <head>
+      <!--Adding default stylesheet-->
+      <link rel="stylesheet" type="text/css" href="default.css">
+      </link>
+      <!--Adding customized styles-->
+      <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+      </link>		
+      <link rel="stylesheet" type="text/css" href="prstyles.css">
+      </link>
+      <!--Adding bootstrap elements-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <title>Register Page</title>
+      <script>
+         <!--function to show tip to enter values-->
+         function showTip(paraId)
+         {
+         	var para = document.getElementById(paraId);
+         	para.style.display= "block";
+         }
+         <!--function to hide tip to enter values-->
+         function hideTip(paraId)
+         {
+         	var para = document.getElementById(paraId);
+         	para.style.display= "none";
+         }
+         <!--function to hide error messages on reset-->
+         function hideDiv()
+         {
+         	var res1 = document.getElementById("msg1");
+         	res1.style.display= "none";
+         	var res2 = document.getElementById("msg2");
+         	res2.style.display= "none";
+         	var res3 = document.getElementById("msg3");
+         	res3.style.display= "none";
+         	var res4 = document.getElementById("msg4");
+         	res4.style.display= "none";
+         	var res5 = document.getElementById("msg5");
+         	res5.style.display= "none";
+         	var res6 = document.getElementById("msg6");
+         	res6.style.display= "none";
+         	var res7 = document.getElementById("msg7");
+         	res7.style.display= "none";
+         	var res8 = document.getElementById("msg8");
+         	res8.style.display= "none";
+         	var res9 = document.getElementById("msg9");
+         	res9.style.display= "none";
+         	var res10 = document.getElementById("msg10");
+         	res10.style.display= "none";
+         	return confirm("Are you sure you want to reset?");
+         }	
+         <!--function to validate entered values-->
+         function validate()
+         {   
+            <!--Setting error messages to default value-->
+         	var valid = true;
+         	var msg1 ="";
+         	var msg2 ="";
+         	var msg3 ="";
+         	var msg4 ="";
+         	var msg5 ="";
+         	var msg6 ="";
+         	var msg7 ="";
+         	var msg8 ="";
+         	var msg9 ="";
+         	var msg10 ="";
+         	<!--Checking if first name is empty-->
+         	var fname = document.getElementById("fname");
+         	if (fname.value == "")
+         	{
+         		fname.focus();
+         		msg1 = "<br />First Name cannot be empty<br />";
+         		valid = false;
+         	}
+         	<!--Checking if last name is empty-->
+         	var lname = document.getElementById("lname");
+         	if (lname.value == "")
+         	{
+         		lname.focus();
+         		msg2 = "<br />Last Name cannot be empty<br />";
+         		valid = false;
+         	}
+         	<!--Checking if address is empty-->
+         	var address = document.getElementById("address");
+         	if (address.value == "")
+         	{
+         		address.focus();
+         		msg3 = "<br />Address cannot be empty<br />";
+         		valid = false;
+         	}				
+         	<!--Checking if city is empty-->
+         	var city = document.getElementById("city");
+         	if (city.value == "")
+         	{
+         		city.focus();
+         		msg4 = "<br />City cannot be empty<br />";
+         		valid = false;
+         	}
+         	<!--Checking if province is empty-->
+         	var prov = document.getElementById("prov");
+         	if (prov.value == "")
+         	{
+         		prov.focus();
+         		msg5 = "<br />Province cannot be empty<br />";
+         		valid = false;
+         	}
+         	<!--Checking if postal code is of x9x9x9 format using regex-->
+         	var post = document.getElementById("post");
+         	var regex = /^[a-z]\d[a-z]?\d[a-z]\d$/;
+         	if (!regex.test(post.value))
+         	{
+         		post.focus();
+         		msg6= "<br />Postal code must be in x9x9x9 format<br />";
+         		valid = false;					
+         	}
+         	<!--Checking if Country is empty-->
+         	var ctry = document.getElementById("ctry");
+         	if (ctry.value == "")
+         	{
+         		ctry.focus();
+         		msg7 = "<br />Country cannot be empty<br />";
+         		valid = false;
+         	}
+         	<!--Checking if email is of the valid format using regex-->
+         	var email = document.getElementById("email");
+         	var regex2 = /^(\w+\.)*(\w+)@(\w+\.)+[a-z]{2,}$/i;
+         	if (!regex2.test(email.value))
+         	{
+         		email.focus();
+         		msg8 = "Enter a valid email address<br />";
+         		valid = false;
+         	}
+         	<!--Checking if home phone number is of the valid format using regex-->
+         	var hphone = document.getElementById("hphone");
+         	var regex3 = /^\d\d\d\d\d\d\d\d\d\d$/;
+         	if (!regex3.test(hphone.value))
+         	{
+         		hphone.focus();
+         		msg9= "<br />Home phone number must be 10 digits<br />";
+         		valid = false;					
+         	}
+         	<!--Checking if business phone number is of the valid format using regex-->
+         	var bphone = document.getElementById("bphone");
+         	var regex4 = /^\d\d\d\d\d\d\d\d\d\d$/;
+         	if (!regex4.test(bphone.value))
+         	{
+         		bphone.focus();
+         		msg10= "<br />Business phone number must be 10 digits<br />";
+         		valid = false;
+         	}
+         	
+         	<!--Checking if the field is invalid and displaying error messages-->
+         	if (msg1 !="")
+         	{
+         	    document.getElementById("msg1").innerHTML = msg1;
+         		var dis1= document.getElementById("msg1");
+         		dis1.style.display = "block";
+         	}
+         	else
+         	{
+         		var dis1= document.getElementById("msg1");
+         		dis1.style.display = "none";
+         	}
+         	if (msg2 !="")
+         	{
+         	    document.getElementById("msg2").innerHTML = msg2;
+         		var dis2= document.getElementById("msg2");
+         		dis2.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis2= document.getElementById("msg2");
+         		dis2.style.display = "none";
+         	}
+         	if (msg3 !="")
+         	{
+         	   document.getElementById("msg3").innerHTML = msg3;
+         	   var dis3= document.getElementById("msg3");
+         	   dis3.style.display = "block";
+         	  
+         	}
+         	else
+         	{
+         		var dis3= document.getElementById("msg3");
+         		dis3.style.display = "none";
+         	}
+         	if (msg4 !="")
+         	{ 
+         		document.getElementById("msg4").innerHTML = msg4;
+         		var dis4= document.getElementById("msg4");
+         		dis4.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis4= document.getElementById("msg4");
+         		dis4.style.display = "none";
+         	}
+         	if (msg5 !="")
+         	{
+         		document.getElementById("msg5").innerHTML = msg5;
+         		var dis5= document.getElementById("msg5");
+         		dis5.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis5= document.getElementById("msg5");
+         		dis5.style.display = "none";
+         	}
+         	if (msg6 !="")
+         	{
+         	    document.getElementById("msg6").innerHTML = msg6;
+         		var dis6= document.getElementById("msg6");
+         		dis6.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis6= document.getElementById("msg6");
+         		dis6.style.display = "none";
+         	}
+         	if (msg7 !="")
+         	{
+         		document.getElementById("msg7").innerHTML = msg7;
+         		var dis7= document.getElementById("msg7");
+         		dis7.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis7= document.getElementById("msg7");
+         		dis7.style.display = "none";
+         	}
+         	if (msg8 !="")
+         	{
+         		document.getElementById("msg8").innerHTML = msg8;
+         		var dis8= document.getElementById("msg8");
+         		dis8.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis8= document.getElementById("msg8");
+         		dis8.style.display = "none";
+         	}
+         	if (msg9 !="")
+         	{  
+         	    document.getElementById("msg9").innerHTML = msg9;
+         		var dis9= document.getElementById("msg9");
+         		dis9.style.display = "block";
+         		
+         	}
+         	else
+         	{
+         		var dis9= document.getElementById("msg9");
+         		dis9.style.display = "none";
+         	}
+         	if (msg10!="")
+         	{
+         		document.getElementById("msg10").innerHTML = msg10;
+         		var dis10= document.getElementById("msg10");
+         		dis10.style.display = "block";
+         	}
+         	else
+         	{
+         		var dis10= document.getElementById("msg10");
+         		dis10.style.display = "none";
+         	}
+         	<!--Setting the focus on the first invalid field-->
+         	if (fname.value == "") {
+             fname.focus();
+                } 
+                else if (lname.value == ""){
+             lname.focus();
+                } 
+         	else if (address.value == ""){
+             address.focus();
+                } 
+         	else if (city.value == ""){
+             city.focus();
+                } 
+         	else if (prov.value == ""){
+             prov.focus();
+                } 
+         	else if (!regex.test(post.value)) {
+             post.focus();
+                } 
+         	else if (ctry.value == ""){
+             ctry.focus();
+                } 
+         	else if (!regex2.test(email.value)) {
+             email.focus();
+                }
+         	else if (!regex3.test(hphone.value)){
+             hphone.focus();
+                } 
+         	else if (!regex4.test(bphone.value)){
+             bphone.focus();
+                } 
+         	return valid;
+         }
+      </script>
+   </head>
+   <body>
+      <!--Header section with logo and Heading-->
+      <header>
+         <img class="headerimg" align="left" src="media/TravelLogo.ico">
+         <h1 class="traveltext">Register with us</br> Today</h1>
+         <!--Adding Navigation bar which redirects to other pages of the website-->
+         <div class="topnav">
+            <a href="tehome"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="teproduct.html"><i class="fa fa-peace"></i> Products</a>
+            <a href="tevacation"><i class="fab fa-telegram-plane"></i> Vacation Packages</a> 
+            <a href="tecontact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+            <a class="active" href="teregister"><i class="fas fa-sign-in-alt"></i></i> Register</a>
+         </div>
+      </header>
+      <!--set up form to collect user information and call function /senddata to send details to database-->
+      <form method="post" action="/senddata">
+	  
+         <!--Getting customer first name-->
+         <!--division to display error-->
+         <div class="error" id="msg1" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="fname">First Name:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="fname" name="fname" onfocus="showTip('fnameTip')" onblur="hideTip('fnameTip')"/></br>
+         <!--Para to display tips to help user enter correct data-->
+         <p class="tips" id="fnameTip">Enter First Name</p>
+		 
+         <!--Getting customer last name-->
+         <!--division to display error-->
+         <div class="error" id="msg2" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="lname">Last Name:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="lname" name="lname" onfocus="showTip('lnameTip')" onblur="hideTip('lnameTip')"/></br>	
+         <!--Para to display tips to help user enter correct data-->
+         <p class="tips" id="lnameTip">Enter Last Name</p>
+		 
+         <!--Getting customer Address-->
+         <!--division to display error-->
+         <div class="error" id="msg3" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="address">Address:</label>&nbsp;&nbsp;			
+         <input type="text" class="frmc" id="address" name="address" onfocus="showTip('addressTip')" onblur="hideTip('addressTip')"/></br>	
+         <!--Para to display tips to help user enter correct data-->		
+         <p class="tips" id="addressTip">Enter Address</p>
+		 
+         <!--Getting customer City-->
+         <!--division to display error-->
+         <div class="error" id="msg4" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="city">City:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="city" name="city" onfocus="showTip('cityTip')" onblur="hideTip('cityTip')"/></br>	
+         <!--Para to display tips to help user enter correct data-->		
+         <p class="tips" id="cityTip">Enter City</p>
+		 
+         <!--Getting customer Province-->
+         <!--division to display error-->
+         <div class="error" id="msg5" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="prov">Province:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="prov" name="prov" onfocus="showTip('provTip')" onblur="hideTip('provTip')"/></br>
+         <!--Para to display tips to help user enter correct data-->
+         <p class="tips" id="provTip">Enter Province</p>
+		 
+         <!--Getting customer Postal Code-->
+         <!--division to display error-->
+         <div class="error" id="msg6" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="post">Postal Code:</label>&nbsp;&nbsp;		
+         <input type="text" class="frmc" id="post" name="post" onfocus="showTip('postTip')" onblur="hideTip('postTip')"/></br>	
+         <!--Para to display tips to help user enter correct data-->		
+         <p class="tips" id="postTip">Enter Postcode in x9x9x9 format</p>
+		 
+         <!--Getting customer Country-->
+         <!--division to display error-->
+         <div class="error" id="msg7" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="post">Country:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="ctry" name="ctry" onfocus="showTip('ctryTip')" onblur="hideTip('ctryTip')"/></br>	
+         <!--Para to display tips to help user enter correct data-->		
+         <p class="tips" id="ctryTip">Enter Country</p>
+		 
+         <!--Getting customer E-mail-->
+         <!--division to display error-->
+         <div class="error" id="msg8" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="email">Email:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="email" name="email" onfocus="showTip('emailTip')" onblur="hideTip('emailTip')"/></br>	
+         <!--Para to display tips to help user enter correct data-->		
+         <p class="tips" id="emailTip">Enter a valid email id</p>
+		 
+         <!--Getting customer Home Phone-->
+         <!--division to display error-->
+         <div class="error" id="msg9" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="hphone">Home phone:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="hphone" name="hphone" onfocus="showTip('hphoneTip')" onblur="hideTip('hphoneTip')"/></br>
+         <!--Para to display tips to help user enter correct data-->
+         <p class="tips" id="hphoneTip">Enter a valid telephone number</p>
+		 
+         <!--Getting customer Business Phone-->
+         <!--division to display error-->
+         <div class="error" id="msg10" style="color: red;font-size : 15px; display: none"></div>
+         <label class="labelaligned" for="hphone">Business phone:</label>&nbsp;&nbsp;
+         <input type="text" class="frmc" id="bphone" name="bphone" onfocus="showTip('bphoneTip')" onblur="hideTip('bphoneTip')"/></br>		
+         <!--Para to display tips to help user enter correct data-->	
+         <p class="tips" id="bphoneTip">Enter a valid telephone number</p>
+		 
+         <!--Getting confirmation from customer for marketing information using checkbox-->
+         <label class="labelaligned" for="info">Marketing info:</label>&nbsp;&nbsp;
+         <input class="frmc" type="checkbox" name="info" value="yes" checked="true"/><br />
+		 
+         <!--Submit and Reset buttons-->
+         <input type="submit" onclick="return validate();"></input>&nbsp;
+         <input type="reset" onclick="hideDiv();"></input>			
+      </form>
+      </div></br></br>	
+      <!--Adding travel company footer and copyright information-->
+      <!--Author: Jiang Hou-->
+      <div class="footer">
+         <div class="box-container">
+            <div class="box">
+               <h3>Company</h3>
+               <a href="#">About</a>
+               <a href="#">Partnership</a>
+               <a href="#">Investor Relations</a>
+               <a href="#">Advertising</a>
+            </div>
+            <div class="box">
+               <h3>Branch locations</h3>
+               <a href="#">Canada</a>
+               <a href="#">USA</a>
+               <a href="#">Japan</a>
+               <a href="#">Germany</a>
+            </div>
+            <div class="box">
+               <h3>Quick links</h3>
+               <a href="tehome">home</a>
+               <a href="tevacation">vacation package</a>
+               <a href="teproduct">product</a>
+               <a href="tecontact">contact us</a>
+               <a href="teregister">register</a>
+            </div>
+            <div class="box">
+               <h3>Follow us</h3>
+               <a href="#">facebook</a>
+               <a href="#">instagram</a>
+               <a href="#">twitter</a>
+               <a href="#">linkedin</a>
+            </div>
+         </div>
+         <div class="box3">
+            <h4 ><span> Travel Experts Copyright &copy; 2021</span> | All rights reserved </h4>
+         </div>
+      </div>
+   </body>
+</html>

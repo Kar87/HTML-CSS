@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--Code to create contact page for Travel Agents website-->
+<!--Last Edited on 26 June 2021-->
+
+
+<!--Adding Navbar,linking stylesheets and adding bootstrap>
+<!--Author: Sai Shalini Karaikatte Venugopal-->
+<html>
+	<head>
+		<!--Adding default stylesheet-->
+		<link rel="stylesheet" type="text/css" href="default.css"></link>
+		<!--Adding customized styles-->
+		<link rel="icon" href="media/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="prstyles.css"></link>
+		<!--Adding bootstrap elements-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+		<title>Contact Us</title>
+        <!--Adding script for calling function to get agent details from database-->		
+		<!--Author: Daogeng Jiang-->
+		<script>
+		function openWindow(url)
+		{
+			var win = open("getagents", "", "height=1200,width=1000,top=100,left=100");
+
+		}
+		</script>
+	</head>	
+	<body>
+	    <!--Header section with logo and Heading-->
+		<header>
+			<img class="headerimg" align="left" src="media/TravelLogo.ico">
+			<h1 class="traveltext">Contact Us at Travel Experts</h1>
+			</header>
+		<!--Adding Navigation bar which redirects to other pages of the website-->
+		<div class="topnav">
+			<a href="tehome"><i class="fa fa-fw fa-home"></i> Home</a> 
+			<a href="teproduct.html"><i class="fa fa-peace"></i> Products</a>
+			<a href="tevacation"><i class="fab fa-telegram-plane"></i> Vacation Packages</a> 
+			<a class="active" href="tecontact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+			<a href="teregister"><i class="fas fa-sign-in-alt"></i></i> Register</a> 
+			
+		</div>
+		</header>
+		<!--Adding iframes to display output of javascript code to fetch agent details-->
+		<!--Author: Daogeng Jiang-->
+		<iframe src="getagents" height="1700" width="1000" title="Iframe Example"></iframe>
+		<br />
+		<br />
+        <!--Adding travel company footer and copyright information-->
+        <!--Author: Jiang Hou-->
+		<div class="footer">
+			<div class="box-container">
+
+				<div class="box">
+					<h3>Company</h3>
+					<a href="#">About</a>
+					<a href="#">Partnership</a>
+					<a href="#">Investor Relations</a>
+					<a href="#">Advertising</a>
+				</div>
+				
+				<div class="box">
+					<h3>Branch locations</h3>
+					<a href="#">Canada</a>
+					<a href="#">USA</a>
+					<a href="#">Japan</a>
+					<a href="#">Germany</a>
+				</div>
+				
+				<div class="box">
+					<h3>Quick links</h3>
+					<a href="tehome">home</a>
+					<a href="tevacation">vacation package</a>
+					<a href="teproduct">product</a>
+					<a href="tecontact">contact us</a>
+					<a href="teregister">register</a>
+				</div>
+				
+				<div class="box">
+					<h3>Follow us</h3>
+					<a href="#">facebook</a>
+					<a href="#">instagram</a>
+					<a href="#">twitter</a>
+					<a href="#">linkedin</a>
+				</div>
+
+			</div>
+
+           <div class="box3">
+           <h4 ><span> Travel Experts Copyright &copy; 2021</span> | All rights reserved </h4>
+          </div>
+		</div>   
+  </body>
+</html>

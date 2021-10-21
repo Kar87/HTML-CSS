@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--Code to create vacation package page for Travel Agents website-->
+<!--Last Edited on 26 June 2021-->
+
+<!--Adding Navbar,linking stylesheets and adding bootstrap>
+<!--Author: Sai Shalini Karaikatte Venugopal-->
+<html>
+   <head>
+      <!--Adding default stylesheet-->
+      <link rel="stylesheet" type="text/css" href="default.css">
+      </link>
+      <!--Adding customized styles-->
+      <link rel="icon" href="media/favicon.ico">
+      </link>		
+      <link rel="stylesheet" type="text/css" href="prstyles.css">
+      </link>
+      <!--Adding bootstrap elements-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <title>Vacation Packages</title>
+	  <!--Adding script for calling function to get package details from database-->		
+	  <!--Author: Daogeng Jiang-->
+      <script>
+         function openWindow(url)
+         {
+         	var win = open("getpackages", "", "height=450,width=1200,top=100,left=100");
+         }
+      </script>
+   </head>
+   <body>
+      <!--Header section with logo and Heading-->
+      <header>
+         <img class="headerimg" align="left" src="media/TravelLogo.ico">
+         <h1 class="traveltext">Vacation </br> Packages</h1>
+      </header>
+	  <!--Adding Navigation bar which redirects to other pages of the website-->
+      <div class="topnav">
+         <a href="tehome"><i class="fa fa-fw fa-home"></i> Home</a> 
+         <a href="teproduct.html"><i class="fa fa-peace"></i> Products</a>
+         <a class="active" href="tevacation"><i class="fab fa-telegram-plane"></i> Vacation Packages</a> 
+         <a href="tecontact"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+         <a href="teregister"><i class="fas fa-sign-in-alt"></i></i> Register</a> 
+      </div>
+      </br></br>
+	  
+      <!--Adding container for package-->
+	  <!--Author: Jiang Hou-->
+      <div class="packages" id="packages">
+         <button class="detailed" onclick="openWindow()">Detailed Package Information</button>
+         <div class="box-container">
+            <div class="box">
+               <img src="media/p-1.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i>Banff</h3>
+                  <p>Lakes are a gorgeous aqua-blue color in summer </p>
+                  <div class="price"> $699 <span> $866</span></div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-2.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Mumbai </h3>
+                  <p>Walk through the Art precinct of Mumbai</p>
+                  <div class="price"> $1899.00 <span>$2299.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-3.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Sydney </h3>
+                  <p>Take an unforgettable 7-mile ferry ride out of Circular Quay </p>
+                  <div class="price"> $2899.00 <span>$3399.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-4.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Paris </h3>
+                  <p>There is no city in the world that spells romance like Paris</p>
+                  <div class="price"> $1999.00 <span>$2299.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-5.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Tokyo </h3>
+                  <p>Tokyo is surreal in its cultural & historical beauty</p>
+                  <div class="price"> $3899.00 <span>$4199.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-6.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Egypt </h3>
+                  <p>The home of pharaohs has so much to offer</p>
+                  <div class="price"> $2599.00 <span>$2799.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-7.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Cancun </h3>
+                  <p>Cancun is one of the most treasured destinations in the world</p>
+                  <div class="price"> $2799.00 <span>$2999.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-8.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Yellowstone </h3>
+                  <p> Dramatic canyons and hot springs abound</p>
+                  <div class="price"> $590.00 <span>$620.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-9.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Neuschwanstein Castle </h3>
+                  <p>Before Disney’s Sleeping Beauty Castle (17.07.1955) was our original 19th Century Fairytale Castle</p>
+                  <div class="price"> $2299.00 <span>$2399.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+            <div class="box">
+               <img src="media/p-10.jpg" alt="">
+               <div class="content">
+                  <h3> <i class="fas fa-map-marker-alt"></i> Austria </h3>
+                  <p>Austria is a contrast of spectacular natural landscapes and elegant urban sleeves.</p>
+                  <div class="price"> $2599.00 <span>$2699.00</span> </div>
+                  <a href="#" class="btn">book now</a>
+               </div>
+            </div>
+         </div>		 
+      </div>
+	  <!--Adding travel company footer and copyright information-->
+      <!--Author: Jiang Hou-->
+      <div class="footer">
+      <div class="box-container">
+         <div class="box">
+            <h3>Company</h3>
+            <a href="#">About</a>
+            <a href="#">Partnership</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Advertising</a>
+         </div>
+         <div class="box">
+            <h3>Branch locations</h3>
+            <a href="#">Canada</a>
+            <a href="#">USA</a>
+            <a href="#">Japan</a>
+            <a href="#">Germany</a>
+         </div>
+         <div class="box">
+            <h3>Quick links</h3>
+            <a href="#">home</a>
+            <a href="#">vacation package</a>
+            <a href="#">product</a>
+            <a href="#">contact us</a>
+            <a href="#">register</a>
+         </div>
+         <div class="box">
+            <h3>Follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+         </div>
+      </div>
+      <div class="box3">
+         <h4 ><span> Travel Experts Copyright &copy; 2021</span> | All rights reserved </h4>
+      </div>
+   </body>
+</html>
